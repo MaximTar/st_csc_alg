@@ -18,6 +18,7 @@ def recoverable_editing_distance_matrix(first_string, second_string):
     n, m = len(first_string) + 1, len(second_string) + 1
     distance_matrix = [0] * n
     distance_matrix = [[el] * m for el in distance_matrix]
+    # distance_matrix = [[0] * n for _ in range(m)]
 
     for i in range(n):
         distance_matrix[i][0] = i

@@ -15,10 +15,10 @@ def timed(f, *args, n_iter=100):
     return acc
 
 
-def compare(fs, args):
+def compare(fs, args, n_iter=100):
     xs = list(range(len(args)))
     for f in fs:
-        plt.plot(xs, [timed(f, chunk) for chunk in args],
+        plt.plot(xs, [timed(f, chunk, n_iter=n_iter) for chunk in args],
                  label=f.__name__)
     plt.legend()
     plt.grid(True)
